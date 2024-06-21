@@ -20,12 +20,14 @@ export class FormComponent {
     })
   }
 
+  // si el formulario es valido retornamos los valores registrados y cerramos el modal
   submit(){
     if(this.form.valid){
       this.dialogRef.close(this.form.value)
     }
   }
 
+  //funcion para cerrar el modal
   close(){
     this.dialogRef.close()
   }

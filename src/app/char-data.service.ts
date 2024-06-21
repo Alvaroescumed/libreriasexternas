@@ -11,6 +11,7 @@ export class CharDataService {
 
   constructor( private http: HttpClient) { }
 
+  // realizamos una peticion Get a la API para traer los datos de los usuarios
   getCharData(): Observable<any>{
     return this.http.get<any>(`${this.apiUrl}/users`)
   }

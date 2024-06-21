@@ -8,6 +8,7 @@ import { CharDataService } from '../char-data.service';
 })
 export class GraphsComponent implements OnInit{
 
+  //inicilaizamos los datos de cada grafico
   lineChartData: any[] = []
   barChartData: any[] = []
 
@@ -26,14 +27,16 @@ export class GraphsComponent implements OnInit{
   yAxisLabel = 'Posts';
   timeline = true;
 
-  
+
+  // en el constructor llamamos al service que realiza la peticion a la API para que nos traiga los datos
   constructor(private chartsData: CharDataService){}
 
+  // cargamos los datos de la API y los transformamos para que sean validos para cada grafico
   loadChartData(){
     this.chartsData.getCharData().subscribe(data => {
       this.barChartData = data.map((user: any) => ({
         name: user.username,
-        value: Math.floor(Math.random() * 100)
+        value: Math.floor(Math.random() * 100) // creamos un valor random para el nº de post de cada usuario
       }))
    
     this.lineChartData = [
@@ -41,11 +44,12 @@ export class GraphsComponent implements OnInit{
         name: 'Series 1',
         series: data.map((user: any) => ({
           name: user.username,
-          value: Math.floor(Math.random() * 100)  // Simulando número de publicaciones
+          value: Math.floor(Math.random() * 100) 
         }))
       }
     ];
   })}
+
 
   ngOnInit(){
     this.loadChartData()

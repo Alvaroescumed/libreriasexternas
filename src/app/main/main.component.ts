@@ -13,6 +13,7 @@ export class MainComponent {
 
   constructor(private dialog: MatDialog){}
 
+  // creamos una funcion para que abra el modal y que al cerrar si hay datos de retorno los ponga en pantalla
   openModal(){
     const dialogRef = this.dialog.open(FormComponent)
 
