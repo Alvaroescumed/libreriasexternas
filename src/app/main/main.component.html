@@ -1,0 +1,10 @@
+<div class="user-container">
+  <button mat-button (click)="openModal()">Abrir Formulario</button>
+
+  <div *ngIf="userData" class="user-card">
+    <h3>Información:</h3>
+    <p><strong>Nombre:</strong> {{ userData.name }}</p>
+    <p><strong>Email:</strong> {{ userData.email }}</p>
+    <p><strong>Dirección:</strong> {{ userData.adress }}</p>
+  </div>
+</div>

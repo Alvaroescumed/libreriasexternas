@@ -1,0 +1,23 @@
+<div class="formulario">
+  <h2 mat-dialog-title>Formulario</h2>
+  <mat-dialog-content>
+    <form [formGroup]="form">
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Dirección</mat-label>
+        <input matInput formControlName="adress">
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="close()">Cancelar</button>
+    <button mat-button (click)="submit()">Enviar</button>
+  </mat-dialog-actions>
+</div>

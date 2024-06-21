@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .card, .user-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  ngx-charts-line-chart,
+  ngx-charts-bar-vertical {
+    display: block;
+  }
+  
+  .user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button[mat-button] {
+    margin: 20px;
+  }
+  
+  .user-card {
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+  }
+  
